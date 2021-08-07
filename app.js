@@ -10,7 +10,9 @@ const scheduleChecker = require("./functional/scheduleChecker");
 
 scheduleChecker();
 
-app.use(express.static(path.resolve(__dirname, "./Front-end/build")));
+const static_file_folder = "./Front-end/build";
+
+app.use(express.static(path.resolve(__dirname, static_file_folder)));
 
 //midlleware
 app.use(express.json());
@@ -38,7 +40,7 @@ app.use(cookieParser());
 app.use("/user", userRouter);
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./Front-end/build", "index.html"));
+  res.sendFile(path.resolve(__dirname, static_file_folder, "index.html"));
 });
 
 //connecting to database
@@ -54,5 +56,7 @@ con.then(() => {
 //listen to the server
 const port = process.env.PORT || 9000;
 app.listen(port, () => {
-  console.log("server started at " + port);
+  console.log(
+    `*****************   server started at ${port}  *********************************`
+  );
 });
