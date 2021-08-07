@@ -25,7 +25,7 @@ function HomePage() {
 
   const [mails, setMails] = useState([]);
   const getAllMails = async () => {
-    const url = "/user/mails/getall";
+    const url = process.env.REACT_APP_BASE_URL + "/user/mails/getall";
     const token = sessionStorage.getItem("token");
     await axios
       .get(url, {

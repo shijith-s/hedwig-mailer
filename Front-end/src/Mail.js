@@ -3,7 +3,7 @@ import "./css/Mail.css";
 import trash from "./css/trash-alt-solid.svg";
 import axios from "axios";
 
-const deleting_url = "/user/mails/delete/";
+const deleting_url = process.env.REACT_APP_BASE_URL + "/user/mails/delete/";
 
 const weakdays = [
   "sunday",

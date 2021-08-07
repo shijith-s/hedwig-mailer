@@ -4,7 +4,7 @@ import "./css/Sign.css";
 import axios from "axios";
 import { UserContext } from "./UserContext";
 
-const url = "/user/signup";
+const url = process.env.REACT_APP_BASE_URL + "/user/signup";
 
 function SignUp() {
   const history = useHistory();

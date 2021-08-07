@@ -38,7 +38,7 @@ const months = [
   "november",
   "december",
 ];
-const adding_url = "/user/mails/add";
+const adding_url = process.env.REACT_APP_BASE_URL + "/user/mails/add";
 
 function NewMail({ getAllMails }) {
   const [scheduleType, setScheduleType] = useState("");
