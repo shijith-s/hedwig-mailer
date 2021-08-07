@@ -1,0 +1,203 @@
+.signInPage {
+  background: -webkit-gradient(linear, right top, left bottom, from(#34e89e), to(#0f3443));
+  background: linear-gradient(to left bottom, #34e89e, #0f3443);
+  height: 100vh;
+  overflow-y: hidden;
+  width: 100%;
+  border: 2px solid linear-gradient(to left bottom, #34e89e, #0f3443);
+}
+
+.signInPage__logo h2 {
+  margin: 20px;
+  color: whitesmoke;
+}
+
+.signInPage__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  height: 50px;
+}
+
+.signInPage__right button {
+  margin: 20px;
+  background: #11726a;
+  padding: 10px;
+  width: 150px;
+  color: white;
+  font-family: " Pacifico", cursive;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  -webkit-box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+          box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+}
+
+.signInPage__right button:active {
+  -webkit-box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
+          box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
+  background: #0a4641;
+}
+
+.signInPage__right button:hover {
+  background-color: #0e5c55;
+}
+
+.pwdCheckbox {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+}
+
+.pwdCheckbox label {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.signInPage__content {
+  color: white;
+  width: 400px;
+  text-align: left;
+  margin: 20px;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.signInPage__content h1 {
+  font-size: 4em;
+}
+
+.signInPage__content p {
+  font-size: 1.5em;
+}
+
+.home {
+  background: -webkit-gradient(linear, right top, left bottom, from(#34e89e), to(#0f3443));
+  background: linear-gradient(to left bottom, #34e89e, #0f3443);
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  border: 2px solid linear-gradient(to left bottom, #34e89e, #0f3443);
+  overflow-y: auto;
+}
+
+.home__header {
+  margin: 10px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home__header h2 {
+  color: white;
+  margin: 20px;
+}
+
+.home__header .home__headerRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home__header .home__headerRight h3 {
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.home__header .home__logout {
+  margin: 20px;
+  background: #11726a;
+  padding: 10px;
+  width: 150px;
+  color: white;
+  font-family: " Pacifico", cursive;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  -webkit-box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+          box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+}
+
+.home__header .home__logout:active {
+  -webkit-box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
+          box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
+  background: #0a4641;
+}
+
+.home__header .home__logout:hover {
+  background-color: #0e5c55;
+}
+
+.home__mails {
+  padding: 20px;
+  padding-bottom: 80px;
+  margin: auto;
+  margin-top: 100px;
+  width: 95%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.home__newMail {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  padding: 15px;
+  min-width: 120px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #144947;
+  color: white;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 2px 3px rgba(1, 1, 1, 0.2);
+          box-shadow: 3px 2px 3px rgba(1, 1, 1, 0.2);
+}
+
+.home__newMail:hover {
+  background: #0b2928;
+}
+
+.home__mailForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/*# sourceMappingURL=HomePage.css.map */
