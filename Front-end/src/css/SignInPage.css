@@ -155,7 +155,7 @@
 
 .signInPage__bottomButtons button {
   margin: 20px;
-  background: #ff4838;
+  background: #162b32;
   padding: 5px;
   width: 130px;
   text-align: center;
@@ -173,11 +173,11 @@
 .signInPage__bottomButtons button:active {
   -webkit-box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
           box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
-  background: #eb1300;
+  background: black;
 }
 
 .signInPage__bottomButtons button:hover {
-  background-color: #ff311f;
+  background-color: #0e1c20;
 }
 
 .copyCredits {

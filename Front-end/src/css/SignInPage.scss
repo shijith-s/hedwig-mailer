@@ -90,7 +90,7 @@
   margin: 0;
   margin-bottom: 10px;
   button {
-    @include button($theme2);
+    @include button();
   }
 }
 
