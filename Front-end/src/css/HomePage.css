@@ -17,7 +17,7 @@
           align-items: center;
   margin: 0;
   height: 60px;
-  background-color: #173e43;
+  background-color: #162b32;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -57,7 +57,7 @@
 
 .home__header .home__logout {
   margin: 20px;
-  background: #3fb0ac;
+  background: #ff4838;
   padding: 5px;
   width: 130px;
   text-align: center;
@@ -75,11 +75,28 @@
 .home__header .home__logout:active {
   -webkit-box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
           box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
-  background: #2b7875;
+  background: #eb1300;
 }
 
 .home__header .home__logout:hover {
-  background-color: #389d9a;
+  background-color: #ff311f;
+}
+
+.home__mailAlternate {
+  color: rgba(0, 0, 0, 0.7);
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+  width: 100vw;
+  max-width: 600px;
+  text-align: left;
+  margin: 0;
+  padding: 150px 50px 50px;
+  font-family: "Rancho", cursive;
+}
+
+.home__mailAlternate h3 {
+  font-size: 3em;
 }
 
 .home__mails {
@@ -104,7 +121,7 @@
   border-radius: 20px;
   font-weight: 600;
   font-size: 1rem;
-  background-color: #173e43;
+  background-color: #162b32;
   color: white;
   cursor: pointer;
   -webkit-box-shadow: 3px 2px 3px rgba(1, 1, 1, 0.2);
@@ -130,7 +147,7 @@
   .home__header .home__headerRight {
     display: none;
     position: absolute;
-    background-color: #173e43;
+    background-color: #162b32;
     right: 0;
     top: 0;
     -webkit-transform: translateY(50px);

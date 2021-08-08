@@ -6,7 +6,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: lightcyan;
+  background: #faf0dc;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -17,6 +17,7 @@
   padding: 10px;
   cursor: pointer;
   position: relative;
+  font-family: "Roboto", sans-serif;
 }
 
 .mail .mail__title {

@@ -1,8 +1,10 @@
 // color variables
 $bgcolor: white;
-$theme1: #173e43;
-$theme2: #3fb0ac;
+// $theme1: #173e43;
+$theme2: #ff4838;
+$theme1: #162b32;
 $btncolor: rgb(17, 114, 106);
+$card: #faf0dc;
 
 // mixins
 @mixin button($btcolor: $theme1) {
@@ -45,3 +47,4 @@ $btncolor: rgb(17, 114, 106);
 $introFont: "Rancho", cursive;
 $headFont: "Pacifico", cursive;
 $font1: Georgia, "Times New Roman", Times, serif;
+$cardFont:'Roboto', sans-serif;

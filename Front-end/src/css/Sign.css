@@ -16,7 +16,7 @@
 
 .link {
   text-decoration: none;
-  color: black;
+  color: #162b32;
   font-family: "Pacifico", cursive;
   font-weight: 300;
   font-size: 30px;
@@ -34,7 +34,7 @@
 }
 
 .sign__form form {
-  background: #3fb0ac;
+  background: #ff4838;
   border-radius: 4px;
   padding: 30px;
   margin-top: 20px;
@@ -68,7 +68,7 @@
   cursor: pointer;
   padding: 10px;
   margin: 10px;
-  background: #173e43;
+  background: #162b32;
   border: none;
   font-weight: 700;
   color: white;
@@ -84,7 +84,7 @@
 .sign__alternateAnch {
   font-size: 15px;
   text-decoration: none;
-  color: #173e43;
+  color: #162b32;
 }
 
 @media only screen and (max-width: 600px) {

@@ -66,6 +66,15 @@ function HomePage() {
           </button>
         </div>
       </div>
+      {mails.length === 0 ? (
+        <div className="home__mailAlternate">
+          <h3>
+            Create new scheduled mails by clicking the "Create New Mail" button
+          </h3>
+        </div>
+      ) : (
+        ""
+      )}
       <div className="home__mails">
         {mails.map((mail) => (
           <Mail mail={mail} setMails={setMails} allMails={mails} />

@@ -3,7 +3,7 @@
 .signInPage {
   background-color: $bgcolor;
   height: 100vh;
-  overflow: hidden;  
+  overflow: hidden;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -94,6 +94,19 @@
   }
 }
 
+.copyCredits {
+  display: block;
+  color: $theme1;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: right;
+  font-family: $introFont;
+  font-size: 25px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1020px) {
   .signInPage {
     .owlImage {
@@ -124,5 +137,8 @@
         padding: 10px;
       }
     }
+  }
+  .copyCredits {
+    text-align: center;
   }
 }

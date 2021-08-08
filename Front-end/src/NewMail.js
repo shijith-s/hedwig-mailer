@@ -121,7 +121,7 @@ function NewMail({ getAllMails }) {
     const scheduleData = scheduleHandler(event);
     console.log("displaying scheduled data");
     console.log(scheduleData);
-    let recipients = event.target.recipient.value.split("/");
+    let recipients = event.target.recipient.value.split(" ");
     recipients.forEach((email) => {
       if (!ValidateEmail(email)) return;
     });
@@ -132,7 +132,7 @@ function NewMail({ getAllMails }) {
     const mailData = {
       title: event.target.title.value,
       subject: event.target.subject.value,
-      recipients: event.target.recipient.value.split("/"),
+      recipients: recipients,
       body: event.target.body.value,
       time: Date.now(),
       schedule: scheduleData,
@@ -200,7 +200,8 @@ function NewMail({ getAllMails }) {
           <input
             type="text"
             name="recipient"
-            placeholder="Enter the recipient email ids   (enter multiple email ids by separating them with '/')"
+            placeholder="Enter the recipient email ids "
+            title="Enter multiple email ids by separating them with space."
             className="newMail__Recipient"
             required
           />
@@ -214,7 +215,9 @@ function NewMail({ getAllMails }) {
           />
           <button type="submit">Submit</button>
         </div>
-        <button type="submit" className="newMail__mobileSubmit">Submit</button>
+        <button type="submit" className="newMail__mobileSubmit">
+          Submit
+        </button>
       </form>
     </div>
   );

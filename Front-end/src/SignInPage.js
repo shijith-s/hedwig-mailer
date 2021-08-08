@@ -40,6 +40,9 @@ function SignInPage() {
             <button className="signInPage__signUp">Sign Up</button>
           </Link>
         </div>
+        <div className="copyCredits">
+          <p>&copy; Shijith</p>
+        </div>
       </div>
     </div>
   );

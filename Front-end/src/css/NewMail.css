@@ -97,30 +97,10 @@
 }
 
 .newMail__formContent button {
-  padding: 10px 40px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border: none;
-  outline: none;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  cursor: pointer;
-  background: #038372;
-  color: whitesmoke;
-  border-radius: 4px;
-}
-
-.newMail__formContent button:hover {
-  background: #026a5c;
-}
-
-.newMail__mobileSubmit {
-  display: none;
   margin: 20px;
-  background: #173e43;
+  background: #ff4838;
   padding: 5px;
   width: 130px;
   text-align: center;
@@ -133,16 +113,45 @@
   border: none;
   -webkit-box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
           box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+  padding: 10px 30px;
+}
+
+.newMail__formContent button:active {
+  -webkit-box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
+          box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
+  background: #eb1300;
+}
+
+.newMail__formContent button:hover {
+  background-color: #ff311f;
+}
+
+.newMail__mobileSubmit {
+  margin: 20px;
+  background: #ff4838;
+  padding: 5px;
+  width: 130px;
+  text-align: center;
+  color: white;
+  font-family: "Merienda", cursive;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  -webkit-box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+          box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+  display: none;
 }
 
 .newMail__mobileSubmit:active {
   -webkit-box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
           box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
-  background: #03090a;
+  background: #eb1300;
 }
 
 .newMail__mobileSubmit:hover {
-  background-color: #102c30;
+  background-color: #ff311f;
 }
 
 .schedule__recurring > div {
@@ -217,6 +226,10 @@
 @media only screen and (max-width: 600px) {
   .newMail {
     overflow-y: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   .newMail__Form {
     -webkit-box-orient: vertical;
@@ -253,6 +266,30 @@
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+}
+
+@media (pointer: coarse), (hover: none) {
+  [title] {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  [title]:focus::after {
+    content: attr(title);
+    position: absolute;
+    top: 90%;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 3px;
   }
 }
 /*# sourceMappingURL=NewMail.css.map */

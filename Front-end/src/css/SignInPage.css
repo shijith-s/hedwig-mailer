@@ -15,7 +15,7 @@
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background-color: #173e43;
+  background-color: #162b32;
 }
 
 .signInPage .owlImage {
@@ -51,7 +51,7 @@
           align-items: center;
   margin: 0;
   height: 60px;
-  background-color: #173e43;
+  background-color: #162b32;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -59,7 +59,7 @@
 
 .signInPage__right button {
   margin: 20px;
-  background: #3fb0ac;
+  background: #ff4838;
   padding: 5px;
   width: 130px;
   text-align: center;
@@ -77,11 +77,11 @@
 .signInPage__right button:active {
   -webkit-box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
           box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
-  background: #2b7875;
+  background: #eb1300;
 }
 
 .signInPage__right button:hover {
-  background-color: #389d9a;
+  background-color: #ff311f;
 }
 
 .pwdCheckbox {
@@ -154,7 +154,7 @@
 
 .signInPage__bottomButtons button {
   margin: 20px;
-  background: #3fb0ac;
+  background: #ff4838;
   padding: 5px;
   width: 130px;
   text-align: center;
@@ -172,11 +172,24 @@
 .signInPage__bottomButtons button:active {
   -webkit-box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
           box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
-  background: #2b7875;
+  background: #eb1300;
 }
 
 .signInPage__bottomButtons button:hover {
-  background-color: #389d9a;
+  background-color: #ff311f;
+}
+
+.copyCredits {
+  display: block;
+  color: #162b32;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: right;
+  font-family: "Rancho", cursive;
+  font-size: 25px;
+  padding-right: 20px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1020px) {
@@ -201,9 +214,12 @@
     display: flex;
   }
   .signInPage .signInPage__bottomButtons button {
-    background-color: #173e43;
+    background-color: #162b32;
     width: 200px;
     padding: 10px;
+  }
+  .copyCredits {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=SignInPage.css.map */

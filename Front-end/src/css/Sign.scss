@@ -13,7 +13,7 @@
 
 .link {
   text-decoration: none;
-  color: black;
+  color: $theme1;
   @include title();
   font-size: 25px;
 }
