@@ -50,6 +50,7 @@
   display: flex;
   align-items: center;
   margin-left: 10px;
+  color: white;
   label {
     margin-left: 10px;
     font-size: 14px;
@@ -87,7 +88,6 @@
   flex: 1;
   min-height: 300px;
   margin: 0;
-  // background-color: greenyellow;
   margin-bottom: 10px;
   button {
     @include button($theme2);
@@ -132,7 +132,6 @@
     .signInPage__bottomButtons {
       display: flex;
       button {
-        background-color: $theme1;
         width: 200px;
         padding: 10px;
       }

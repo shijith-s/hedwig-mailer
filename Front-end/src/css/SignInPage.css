@@ -94,6 +94,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin-left: 10px;
+  color: white;
 }
 
 .pwdCheckbox label {
@@ -214,7 +215,6 @@
     display: flex;
   }
   .signInPage .signInPage__bottomButtons button {
-    background-color: #162b32;
     width: 200px;
     padding: 10px;
   }
