@@ -48,10 +48,17 @@ function HomePage() {
     let x = document.querySelector(".home__mailForm");
     x.style.display = "block";
   };
+  const showMenu = () => {
+    const x = document.querySelector(".home__headerRight");
+    x.classList.toggle("home__headerRight__hidden");
+  };
   return (
     <div className="home">
       <div className="home__header">
         <h2>hedwig</h2>
+        <div className="home__menu" onClick={showMenu}>
+          &#8801;
+        </div>
         <div className="home__headerRight">
           <h3>{`Hello ${name ? name : ""}`}</h3>
           <button className="home__logout" onClick={logout}>

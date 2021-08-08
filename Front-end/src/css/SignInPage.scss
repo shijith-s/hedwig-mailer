@@ -1,55 +1,48 @@
-@mixin button($btcolor) {
-  margin: 20px;
-  // margin-bottom:10px;
-  background: $btcolor;
-  padding: 10px;
-  width: 150px;
-  color: white;
-  font-family: " Pacifico", cursive;
-  font-size: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 6px;
-  border: none;
-  box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
-  &:active {
-    box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
-    background: darken($btcolor, 10%);
-    // background: crimson;
-  }
-  &:hover {
-    background-color: darken($btcolor, 5%);
-  }
-}
-
-$btncolor:rgb(17, 114, 106);
-$bgcolor: linear-gradient(to left bottom, #34e89e, #0f3443);           //rgb(5, 80, 80);
+@import "./variables";
 
 .signInPage {
-  background: $bgcolor;
+  background-color: $bgcolor;
   height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;  
   width: 100%;
-  border: 2px solid $bgcolor;
+  margin: 0;
+  padding: 0;
+  color: black;
+  .circle1 {
+    position: absolute;
+    bottom: -250px;
+    left: -250px;
+    @include circle(500px, $theme1);
+  }
+  .owlImage {
+    position: absolute;
+    bottom: 50vh;
+    transform: translateY(50%);
+    right: 100px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 .signInPage__logo h2 {
-  margin: 20px; 
-  // padding: 10px;
-  color: whitesmoke;
+  margin: 20px;
+  color: white;
+  @include title();
 }
 .signInPage__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // padding: 10px;
-  margin: 10px;
-  height: 50px;
-  // margin-top:0;
-  // border:2px solid yellow;
+  margin: 0;
+  height: 60px;
+  background-color: $theme1;
+  position: sticky;
+  top: 0;
 }
 .signInPage__right button {
-  @include button($btncolor);
+  @include button($theme2);
 }
 
 .pwdCheckbox {
@@ -63,17 +56,73 @@ $bgcolor: linear-gradient(to left bottom, #34e89e, #0f3443);           //rgb(5, 
   }
 }
 
+.signInPage__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  overflow: auto;
+}
 .signInPage__content {
-  color: white;
-  width: 400px;
+  color: black;
+  flex: 1.5;
+  width: 100vw;
+  max-width: 600px;
   text-align: left;
-  margin: 20px;
-  margin-top:100px;
-  margin-left:100px;
-  h1{
-    font-size:4em; 
+  margin: 0;
+  padding: 100px 50px;
+  font-family: $introFont;
+  text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.5);
+  h1 {
+    font-size: 4em;
   }
-  p{
-    font-size:1.5em;
+  p {
+    font-size: 3em;
+  }
+}
+
+.signInPage__bottomButtons {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  min-height: 300px;
+  margin: 0;
+  // background-color: greenyellow;
+  margin-bottom: 10px;
+  button {
+    @include button($theme2);
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .signInPage {
+    .owlImage {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .signInPage {
+    .signInPage__right {
+      display: none;
+    }
+    .signInPage__content {
+      h1 {
+        font-size: 3em;
+      }
+      p {
+        font-size: 2em;
+      }
+    }
+
+    .signInPage__bottomButtons {
+      display: flex;
+      button {
+        background-color: $theme1;
+        width: 200px;
+        padding: 10px;
+      }
+    }
   }
 }

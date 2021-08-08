@@ -1,8 +1,8 @@
-.signUp, .signIn {
+.signUp,
+.signIn {
   margin-top: 0;
   height: 100vh;
   width: 100vw;
-  background: #218E70;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,7 +16,11 @@
 
 .link {
   text-decoration: none;
-  color: white;
+  color: black;
+  font-family: "Pacifico", cursive;
+  font-weight: 300;
+  font-size: 30px;
+  font-size: 25px;
 }
 
 .sign__body {
@@ -30,7 +34,7 @@
 }
 
 .sign__form form {
-  background: #d4f4f5;
+  background: #3fb0ac;
   border-radius: 4px;
   padding: 30px;
   margin-top: 20px;
@@ -64,7 +68,7 @@
   cursor: pointer;
   padding: 10px;
   margin: 10px;
-  background: #124F3E;
+  background: #173e43;
   border: none;
   font-weight: 700;
   color: white;
@@ -73,12 +77,23 @@
 
 .sign__alternate {
   color: black;
-  font-size: .9em;
+  font-size: 0.9em;
+  margin: 10px;
 }
 
 .sign__alternateAnch {
   font-size: 15px;
   text-decoration: none;
-  color: white;
+  color: #173e43;
+}
+
+@media only screen and (max-width: 600px) {
+  .sign__body .sign__form form {
+    width: 300px;
+  }
+  .sign__body .sign__header {
+    font-size: 20px;
+    font-weight: 100;
+  }
 }
 /*# sourceMappingURL=Sign.css.map */

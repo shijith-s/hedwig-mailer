@@ -214,6 +214,7 @@ function NewMail({ getAllMails }) {
           />
           <button type="submit">Submit</button>
         </div>
+        <button type="submit" className="newMail__mobileSubmit">Submit</button>
       </form>
     </div>
   );

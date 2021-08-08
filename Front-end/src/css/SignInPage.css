@@ -1,15 +1,42 @@
 .signInPage {
-  background: -webkit-gradient(linear, right top, left bottom, from(#34e89e), to(#0f3443));
-  background: linear-gradient(to left bottom, #34e89e, #0f3443);
+  background-color: white;
   height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;
   width: 100%;
-  border: 2px solid linear-gradient(to left bottom, #34e89e, #0f3443);
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+.signInPage .circle1 {
+  position: absolute;
+  bottom: -250px;
+  left: -250px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #173e43;
+}
+
+.signInPage .owlImage {
+  position: absolute;
+  bottom: 50vh;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 100px;
+}
+
+.signInPage .owlImage img {
+  width: 100%;
+  height: 100%;
 }
 
 .signInPage__logo h2 {
   margin: 20px;
-  color: whitesmoke;
+  color: white;
+  font-family: "Pacifico", cursive;
+  font-weight: 300;
+  font-size: 30px;
 }
 
 .signInPage__header {
@@ -22,21 +49,26 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px;
-  height: 50px;
+  margin: 0;
+  height: 60px;
+  background-color: #173e43;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .signInPage__right button {
   margin: 20px;
-  background: #11726a;
-  padding: 10px;
-  width: 150px;
+  background: #3fb0ac;
+  padding: 5px;
+  width: 130px;
+  text-align: center;
   color: white;
-  font-family: " Pacifico", cursive;
-  font-size: 20px;
+  font-family: "Merienda", cursive;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 4px;
   border: none;
   -webkit-box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
           box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
@@ -45,11 +77,11 @@
 .signInPage__right button:active {
   -webkit-box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
           box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
-  background: #0a4641;
+  background: #2b7875;
 }
 
 .signInPage__right button:hover {
-  background-color: #0e5c55;
+  background-color: #389d9a;
 }
 
 .pwdCheckbox {
@@ -69,13 +101,33 @@
   font-size: 14px;
 }
 
+.signInPage__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100%;
+  overflow: auto;
+}
+
 .signInPage__content {
-  color: white;
-  width: 400px;
+  color: black;
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+  width: 100vw;
+  max-width: 600px;
   text-align: left;
-  margin: 20px;
-  margin-top: 100px;
-  margin-left: 100px;
+  margin: 0;
+  padding: 100px 50px;
+  font-family: "Rancho", cursive;
+  text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .signInPage__content h1 {
@@ -83,6 +135,75 @@
 }
 
 .signInPage__content p {
-  font-size: 1.5em;
+  font-size: 3em;
+}
+
+.signInPage__bottomButtons {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-height: 300px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.signInPage__bottomButtons button {
+  margin: 20px;
+  background: #3fb0ac;
+  padding: 5px;
+  width: 130px;
+  text-align: center;
+  color: white;
+  font-family: "Merienda", cursive;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  -webkit-box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+          box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+}
+
+.signInPage__bottomButtons button:active {
+  -webkit-box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
+          box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
+  background: #2b7875;
+}
+
+.signInPage__bottomButtons button:hover {
+  background-color: #389d9a;
+}
+
+@media only screen and (max-width: 1020px) {
+  .signInPage .owlImage {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .signInPage .signInPage__right {
+    display: none;
+  }
+  .signInPage .signInPage__content h1 {
+    font-size: 3em;
+  }
+  .signInPage .signInPage__content p {
+    font-size: 2em;
+  }
+  .signInPage .signInPage__bottomButtons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .signInPage .signInPage__bottomButtons button {
+    background-color: #173e43;
+    width: 200px;
+    padding: 10px;
+  }
 }
 /*# sourceMappingURL=SignInPage.css.map */

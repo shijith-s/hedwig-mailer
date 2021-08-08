@@ -1,0 +1,47 @@
+// color variables
+$bgcolor: white;
+$theme1: #173e43;
+$theme2: #3fb0ac;
+$btncolor: rgb(17, 114, 106);
+
+// mixins
+@mixin button($btcolor: $theme1) {
+  margin: 20px;
+  background: $btcolor;
+  padding: 5px;
+  width: 130px;
+  text-align: center;
+  color: white;
+  font-family: "Merienda", cursive;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+  &:active {
+    box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
+    background: darken($btcolor, 15%);
+  }
+  &:hover {
+    background-color: darken($btcolor, 5%);
+  }
+}
+
+@mixin circle($rd, $bg: $theme1) {
+  width: $rd;
+  height: $rd;
+  border-radius: 50%;
+  background-color: $bg;
+}
+
+@mixin title() {
+  font-family: $headFont;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+// font variables
+$introFont: "Rancho", cursive;
+$headFont: "Pacifico", cursive;
+$font1: Georgia, "Times New Roman", Times, serif;

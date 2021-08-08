@@ -117,8 +117,36 @@
   background: #026a5c;
 }
 
+.newMail__mobileSubmit {
+  display: none;
+  margin: 20px;
+  background: #173e43;
+  padding: 5px;
+  width: 130px;
+  text-align: center;
+  color: white;
+  font-family: "Merienda", cursive;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  -webkit-box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+          box-shadow: 0 5px 10px 1px rgba(59, 56, 56, 0.7);
+}
+
+.newMail__mobileSubmit:active {
+  -webkit-box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
+          box-shadow: 0 3px 5px 0.4px rgba(59, 56, 56, 0.9);
+  background: #03090a;
+}
+
+.newMail__mobileSubmit:hover {
+  background-color: #102c30;
+}
+
 .schedule__recurring > div {
-  width: 200px !important;
+  width: 200px;
 }
 
 .schedule__recurring > div h5 {
@@ -126,7 +154,7 @@
 }
 
 .schedule__recurring div input {
-  width: 60px;
+  width: 60%;
   border-radius: 4px 0 0 4px;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
   margin: 0;
@@ -137,7 +165,7 @@
   border-radius: 0 4px 4px 0;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
   height: 30px;
-  width: 80px;
+  width: 100%;
   padding: 4px;
   margin: 0;
 }
@@ -184,5 +212,47 @@
   border-radius: 4px;
   border: none;
   outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .newMail {
+    overflow-y: auto;
+  }
+  .newMail__Form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+  .newMail__Form .newMail__options {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .newMail__Form .newMail__options select {
+    width: 80%;
+  }
+  .newMail__Form .newMail__formContent {
+    width: 100%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .newMail__Form .newMail__formContent button {
+    display: none;
+  }
+  .schedule__options > div {
+    width: 80%;
+    margin: 10px auto;
+  }
+  .newMail__mobileSubmit {
+    display: block;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 /*# sourceMappingURL=NewMail.css.map */
