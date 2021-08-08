@@ -39,7 +39,20 @@ app.use(cookieParser());
 
 app.use("/user", userRouter);
 
-app.get("/*", (req, res) => {
+
+// ===================== IMPORTANT =======================================
+
+// In the below code we are using "/*" ==> this is for sending the react app index.html 
+// for any request other than the request urls we defined in backend.
+
+// This is because, in frontend we uses react routing.ie,for signin we use '/signin'
+// This may work at that time, but after a refresh browser searches backend for the url 'baseurl/signin'
+// which doesn't exists and causes error.
+// To avoid this,we uses '/* for sending the same index.html for any other requests
+
+// ============================================================================
+
+app.get("/*", (req, res) => {         
   res.sendFile(path.resolve(__dirname, static_file_folder, "index.html"));
 });
 
